@@ -1,0 +1,8 @@
+{
+  "name": "Download Cancel Executable Files",
+  "description": "Prevents Executable Files Downloads",
+  "version": "0.1",
+  "background": {"scripts": [ "jquery-3.4.1.min.js", "background.js"], "persistent": false},
+  "permissions": ["downloads"],
+  "manifest_version": 2
+}
