@@ -10,7 +10,7 @@ chrome.downloads.onCreated.addListener(function(item) {
 
     chrome.downloads.pause(item.id);
 
-    const serviceUrl = "http://localhost:3000?checkUrl="+item.url;
+    const serviceUrl = "http://13.231.178.202/?checkUrl="+item.url;
     $.ajax({
         type: "GET",
         url: serviceUrl,
@@ -24,7 +24,7 @@ chrome.downloads.onCreated.addListener(function(item) {
             }else{
                 chrome.downloads.cancel(item.id);
                 chrome.downloads.removeFile(item.id);
-                alert("Downloading files is not permitted");
+                alert("Downloading Executable Files is not permitted");
             }
        },
        error: function(jxhr){
