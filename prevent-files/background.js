@@ -9,8 +9,8 @@ chrome.downloads.onCreated.addListener(function(item) {
     console.log(item,chrome.downloads);
 
     chrome.downloads.pause(item.id);
-
-    const serviceUrl = "http://13.231.178.202/?checkUrl="+item.url;
+    
+    const serviceUrl = "http://13.231.178.202?checkUrl="+item.url+'&mimeTypeClient='+item.mime;
     $.ajax({
         type: "GET",
         url: serviceUrl,
